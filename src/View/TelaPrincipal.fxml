@@ -9,14 +9,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="488.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaPrincipalController">
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="532.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaPrincipalController">
     <children>
-        <ImageView fx:id="image1" fitHeight="532.0" fitWidth="653.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="image1" fitHeight="532.0" fitWidth="653.0" layoutY="-1.0" pickOnBounds="true">
             <image>
                 <Image url="@../Imagem/login7.jpg" />
             </image>
         </ImageView>
-        <MenuBar fx:id="menub1" blendMode="DARKEN" layoutX="10.0" layoutY="7.0" prefHeight="25.0" prefWidth="633.0" styleClass="menubar" stylesheets="@../CSS/TelaPrincipal.css" AnchorPane.topAnchor="10.0">
+        <MenuBar fx:id="menub1" layoutX="10.0" layoutY="7.0" prefHeight="25.0" prefWidth="633.0" styleClass="menubar" stylesheets="@../CSS/TelaPrincipal.css" AnchorPane.topAnchor="10.0">
             <menus>
                 <Menu fx:id="menu1" mnemonicParsing="true" text="Usuário">
                     <items>
@@ -42,11 +42,11 @@
         <Label fx:id="bv" layoutX="495.0" layoutY="219.0" styleClass="lb" stylesheets="@../CSS/TelaPrincipal.css" text="Bem - Vindo" />
         <Label fx:id="user" layoutX="508.0" layoutY="244.0" styleClass="lb" stylesheets="@../CSS/TelaPrincipal.css" text="Usuario" />
         <Label fx:id="att" layoutX="291.0" layoutY="393.0" styleClass="lb" stylesheets="@../CSS/TelaPrincipal.css" text="Última Atualização:" />
-        <Button fx:id="hist" layoutX="41.0" layoutY="203.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="148.0" styleClass="bt" stylesheets="@../CSS/TelaPrincipal.css" text="Histórico de Gastos" textAlignment="CENTER" />
-        <Button fx:id="atualizar" layoutX="41.0" layoutY="269.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="148.0" styleClass="bt" stylesheets="@../CSS/TelaPrincipal.css" text="Atualizar Dados" AnchorPane.topAnchor="269.0" />
-        <Button fx:id="econ" layoutX="41.0" layoutY="335.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="148.0" styleClass="bt" stylesheets="@../CSS/TelaPrincipal.css" text="Economia" AnchorPane.topAnchor="335.0" />
+        <Button fx:id="hist" layoutX="41.0" layoutY="203.0" mnemonicParsing="false" onAction="#historico" prefHeight="31.0" prefWidth="148.0" styleClass="bt" stylesheets="@../CSS/TelaPrincipal.css" text="Histórico de Gastos" />
+        <Button fx:id="atualizar" layoutX="41.0" layoutY="269.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="32.0" prefWidth="148.0" styleClass="bt" stylesheets="@../CSS/TelaPrincipal.css" text="Atualizar Dados" AnchorPane.topAnchor="269.0" />
+        <Button fx:id="econ" layoutX="41.0" layoutY="335.0" mnemonicParsing="false" onAction="#economia" prefHeight="32.0" prefWidth="148.0" styleClass="bt" stylesheets="@../CSS/TelaPrincipal.css" text="Economia" AnchorPane.topAnchor="335.0" />
         <DatePicker fx:id="data" layoutX="472.0" layoutY="389.0" prefHeight="25.0" prefWidth="197.0" styleClass="datapiker" stylesheets="@../CSS/TelaPrincipal.css" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="44.0" />
-        <Button fx:id="sair" layoutX="20.0" layoutY="440.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="50.0" styleClass="bts" stylesheets="@../CSS/TelaPrincipal.css" text="Sair" textAlignment="CENTER" />
+        <Button fx:id="sair" layoutX="20.0" layoutY="440.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="50.0" styleClass="bts" stylesheets="@../CSS/TelaPrincipal.css" text="Sair" />
         <ImageView fx:id="imagev2" fitHeight="150.0" fitWidth="157.0" layoutX="452.0" layoutY="61.0" pickOnBounds="true">
             <image>
                 <Image url="@../Imagem/computer-user-icon-1.png" />

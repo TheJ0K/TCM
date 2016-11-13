@@ -39,8 +39,6 @@
     -fx-background-insets: 0;
     -fx-background-color: #ffffff;
     -fx-text-fill: #000000;
-    -fx-min-height: 25;
-    -fx-min-width: 75;
     -fx-font: bold 12px "times new roman";
     -fx-text-alignment: center;
 }
