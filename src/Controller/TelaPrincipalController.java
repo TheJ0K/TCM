@@ -1,17 +1,14 @@
 package Controller;
 
-import Main.MAtualizar;
 import Main.MCadastro;
-import Main.MEconomia;
-import Main.MHistorico;
 import Main.MPrincipal;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -53,6 +50,16 @@ public class TelaPrincipalController implements Initializable {
 
     String caminho;
 
+    public Node getNode(String node) { //Metodo principal, é com ele que tera a possibilidade de usar a função
+        Node no = null; //Criação de uma variavel Node (é do java e precisa de importação)
+        try {
+            no = FXMLLoader.load(getClass().getResource(node)); //Comparando diretamente ao que ja sabemos
+        } catch (Exception e) {                                 //faça um comparativo as mains.
+            System.err.println(e);
+        }
+        return no;
+    }
+
     @FXML
     public void imagem() {
         try {
@@ -73,37 +80,26 @@ public class TelaPrincipalController implements Initializable {
     }
 
     @FXML
-    public void historico() {
-        try {
-            MHistorico tela = new MHistorico();
-            tela.start(new Stage());
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
+    void historico() { //Não tem problema ser void apenas
+        anchor.getChildren().clear(); //Vai pegar o que esta dentro do anchor e limpar
+        anchor.getChildren().add(getNode("/View/TelaHistorico.fxml"));//Vai pegar o que esta dentro de
+        //outro fxml e trazer na tela.
     }
 
     @FXML
-    public void atualizar() {
-        try {
-            MAtualizar tela = new MAtualizar();
-            tela.start(new Stage());
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
+    void atualizar() {
+        anchor.getChildren().clear();
+        anchor.getChildren().add(getNode("/View/TelaAtualizar.fxml"));
     }
 
     @FXML
-    public void economia() {
-        try {
-            MEconomia tela = new MEconomia();
-            tela.start(new Stage());
-        } catch (Exception ee) {
-            ee.printStackTrace();
-        }
+    void economia() {
+        anchor.getChildren().clear();
+        anchor.getChildren().add(getNode("/View/TelaEconomia.fxml"));
     }
 
     @FXML
-    public void sair() {
+    void sair() {
         try {
             Alert sair = new Alert(AlertType.WARNING);
             sair.setHeaderText("Deseja Mesmo Sair?");
@@ -114,7 +110,7 @@ public class TelaPrincipalController implements Initializable {
     }
 
     @FXML
-    private void Cadastrar_Usuario(ActionEvent evt) {
+    void Cadastrar_Usuario() {
         try {
             MCadastro cad = new MCadastro();
             cad.start(new Stage());
@@ -122,22 +118,22 @@ public class TelaPrincipalController implements Initializable {
             ee.printStackTrace();
         }
     }
-    
+
     public static Stage TelaPrincipal;
-    
-    public void start(Stage stage) throws Exception{
+
+    public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaPrincipal.fxml"));
-        
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        
+
         TelaPrincipal = stage;
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
     }
 
 }

@@ -9,35 +9,35 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaHistoricoController">
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="532.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaHistoricoController">
     <children>
-        <SplitPane dividerPositions="0.2946793997271487" prefHeight="485.0" prefWidth="655.0">
+        <SplitPane fx:id="split" dividerPositions="0.2946793997271487" prefHeight="532.0" prefWidth="655.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="158.0">
+                <AnchorPane fx:id="anchor2" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="158.0">
                     <children>
-                        <ImageView fitHeight="485.0" fitWidth="193.0" layoutY="-3.0" pickOnBounds="true">
+                        <ImageView fitHeight="530.0" fitWidth="193.0" layoutY="-3.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <image>
                                 <Image url="@../Imagem/blue_light_line.jpg" />
                             </image>
                         </ImageView>
-                        <MenuButton fx:id="selecionar" layoutX="9.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: White;" text="Data do Registro">
+                        <Label layoutX="47.0" layoutY="35.0" styleClass="lb" stylesheets="@../CSS/TelaHistorico.css" text="Histórico" />
+                        <Label layoutX="10.0" layoutY="74.0" styleClass="lb1" stylesheets="@../CSS/TelaHistorico.css" text="Pesquisar:" />
+                        <Label layoutX="9.0" layoutY="136.0" styleClass="lb1" stylesheets="@../CSS/TelaHistorico.css" text="Inserir:" />
+                        <MenuButton fx:id="selecionar" layoutX="9.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" styleClass="menubutton" stylesheets="@../CSS/TelaHistorico.css" text="Data do Registro">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Action 1" />
                                 <MenuItem mnemonicParsing="false" text="Action 2" />
                             </items>
                         </MenuButton>
-                        <TextField fx:id="pesquisatf" layoutX="10.0" layoutY="153.0" prefHeight="25.0" prefWidth="171.0" promptText="Data do Registro..." style="-fx-background-color: White;" />
-                        <Button fx:id="pesquisar" layoutX="111.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: White;" text="Pesquisar" />
-                        <Button fx:id="gerarpdf" layoutX="10.0" layoutY="188.0" mnemonicParsing="false" style="-fx-background-color: White;" text="Gerar PDF" />
-                        <Label layoutX="53.0" layoutY="48.0" text="Histórico" />
-                        <Label layoutX="10.0" layoutY="92.0" text="Pesquisar:" />
-                        <Label layoutX="10.0" layoutY="149.0" text="Inserir:" />
-                        <Button fx:id="sair" layoutX="9.0" layoutY="444.0" mnemonicParsing="false" style="-fx-background-color: White;" text="Sair" />
+                        <TextField fx:id="pesquisatf" layoutX="10.0" layoutY="153.0" prefHeight="25.0" prefWidth="171.0" promptText="Data do Registro..." styleClass="textfield" stylesheets="@../CSS/TelaHistorico.css" />
+                        <Button fx:id="pesquisar" layoutX="111.0" layoutY="188.0" mnemonicParsing="false" styleClass="bt" stylesheets="@../CSS/TelaHistorico.css" text="Pesquisar" />
+                        <Button fx:id="gerarpdf" layoutX="10.0" layoutY="188.0" mnemonicParsing="false" styleClass="bt" stylesheets="@../CSS/TelaHistorico.css" text="Gerar PDF" />
+                        <Button fx:id="sair" layoutX="66.0" layoutY="431.0" mnemonicParsing="false" onAction="#voltar" styleClass="bt" stylesheets="@../CSS/TelaHistorico.css" text="Voltar" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="66.0" />
                     </children>
                 </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="483.0" prefWidth="448.0">
+                <AnchorPane fx:id="anchor3" minHeight="0.0" minWidth="0.0" prefHeight="483.0" prefWidth="448.0">
                     <children>
-                        <TableView fx:id="tablehistorico" layoutX="-4.0" prefHeight="483.0" prefWidth="466.0" styleClass="table" stylesheets="@../CSS/TelaHistorico.css">
+                        <TableView fx:id="tablehistorico" layoutX="-4.0" prefHeight="483.0" prefWidth="466.0" styleClass="table" stylesheets="@../CSS/TelaHistorico.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <columns>
                                 <TableColumn fx:id="dataregc" prefWidth="109.0" styleClass="table1" text="Data do Registro" />
                                 <TableColumn fx:id="dadospc" prefWidth="114.0" styleClass="table1" text="Dados Primários" />
