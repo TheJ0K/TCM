@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="488.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaEditUserController">
+    <children>
+        <ImageView fx:id="imagev1" fitHeight="491.0" fitWidth="653.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+            <image>
+                <Image url="@../Imagem/login7.jpg" />
+            </image>
+        </ImageView>
+        <StackPane fx:id="stack" layoutX="232.0" layoutY="149.0" prefHeight="240.0" prefWidth="380.0" styleClass="pane1" stylesheets="@../CSS/TelaEditUser.css">
+            <children>
+                <Label fx:id="lb1" styleClass="lb1" stylesheets="@../CSS/TelaEditUser.css" text="Area de Informações" StackPane.alignment="TOP_CENTER">
+                    <StackPane.margin>
+                        <Insets top="15.0" />
+                    </StackPane.margin>
+                </Label>
+                <Label fx:id="lb2" styleClass="lb2" stylesheets="@../CSS/TelaEditUser.css" text="Novo E-mail:" StackPane.alignment="TOP_RIGHT">
+                    <StackPane.margin>
+                        <Insets right="285.0" top="65.0" />
+                    </StackPane.margin>
+                </Label>
+                <Label fx:id="lb3" styleClass="lb2" stylesheets="@../CSS/TelaEditUser.css" text="Antiga Senha:" StackPane.alignment="TOP_RIGHT">
+                    <StackPane.margin>
+                        <Insets right="285.0" top="125.0" />
+                    </StackPane.margin>
+                </Label>
+                <Label fx:id="lb4" styleClass="lb2" stylesheets="@../CSS/TelaEditUser.css" text="Nova Senha:" StackPane.alignment="TOP_RIGHT">
+                    <StackPane.margin>
+                        <Insets right="285.0" top="185.0" />
+                    </StackPane.margin>
+                </Label>
+                <TextField fx:id="tf1" prefHeight="25.0" prefWidth="267.0" promptText="Informe o novo e-mail..." styleClass="textfield" stylesheets="@../CSS/TelaEditUser.css" StackPane.alignment="TOP_RIGHT">
+                    <StackPane.margin>
+                        <Insets left="100.0" right="20.0" top="60.0" />
+                    </StackPane.margin>
+                </TextField>
+                <PasswordField fx:id="passf1" prefHeight="25.0" prefWidth="267.0" promptText="Informe a antiga senha..." styleClass="textfield" stylesheets="@../CSS/TelaEditUser.css" StackPane.alignment="TOP_RIGHT">
+                    <StackPane.margin>
+                        <Insets left="100.0" right="20.0" top="120.0" />
+                    </StackPane.margin>
+                </PasswordField>
+                <PasswordField fx:id="passf2" prefHeight="25.0" prefWidth="267.0" promptText="Informe a nova senha..." styleClass="textfield" stylesheets="@../CSS/TelaEditUser.css" StackPane.alignment="TOP_RIGHT">
+                    <StackPane.margin>
+                        <Insets left="100.0" right="20.0" top="180.0" />
+                    </StackPane.margin>
+                </PasswordField>
+            </children>
+        </StackPane>
+        <Pane fx:id="pane" layoutX="34.0" layoutY="43.0" prefHeight="151.0" prefWidth="153.0" styleClass="pane1" stylesheets="@../CSS/TelaEditUser.css">
+            <children>
+                <ImageView fx:id="imagev2" fitHeight="152.0" fitWidth="150.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Imagem/User1.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Button fx:id="bt1" layoutX="232.0" layoutY="75.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="380.0" styleClass="bt" stylesheets="@../CSS/TelaEditUser.css" text="Buscar imagem no computador" />
+        <Button fx:id="bt2" layoutX="476.0" layoutY="421.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="136.0" styleClass="bt" stylesheets="@../CSS/TelaEditUser.css" text="Salvar Alterações" />
+        <Button fx:id="bt3" layoutX="34.0" layoutY="421.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="73.0" styleClass="bt" stylesheets="@../CSS/TelaEditUser.css" text="Voltar" />
+    </children>
+</AnchorPane>

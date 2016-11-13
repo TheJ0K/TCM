@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="483.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaAtualizarController">
+   <children>
+      <ImageView fx:id="imagev1" fitHeight="489.0" fitWidth="653.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Imagem/login7.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="62.0" layoutY="34.0" prefHeight="117.0" prefWidth="113.0" styleClass="pane" stylesheets="@../CSS/AtualizarDados.css">
+         <children>
+            <ImageView fx:id="imagev2" fitHeight="117.0" fitWidth="113.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Imagem/User1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lb1" layoutX="76.0" layoutY="173.0" styleClass="lb" stylesheets="@../CSS/AtualizarDados.css" text="Nome Usuário" />
+      <Label fx:id="lb2" layoutX="259.0" layoutY="130.0" styleClass="lb" stylesheets="@../CSS/AtualizarDados.css" text="Data:" AnchorPane.rightAnchor="360.0" />
+      <Label fx:id="lb3" layoutX="199.0" layoutY="195.0" styleClass="lb" stylesheets="@../CSS/AtualizarDados.css" text="Numero inicial:" AnchorPane.rightAnchor="360.0" />
+      <Label fx:id="lb4" layoutX="197.0" layoutY="264.0" styleClass="lb" stylesheets="@../CSS/AtualizarDados.css" text="Numeros finais:" AnchorPane.rightAnchor="360.0" />
+      <DatePicker fx:id="datap1" layoutX="297.0" layoutY="124.0" prefHeight="27.0" prefWidth="283.0" styleClass="datapiker" stylesheets="@../CSS/AtualizarDados.css" />
+      <TextField fx:id="textf1" layoutX="297.0" layoutY="189.0" prefHeight="27.0" prefWidth="283.0" promptText="Informe os números iniciais da leitura..." styleClass="textfield" stylesheets="@../CSS/AtualizarDados.css" />
+      <TextField fx:id="textf2" layoutX="298.0" layoutY="258.0" prefHeight="27.0" prefWidth="283.0" promptText="Informe os números finais da leitura..." styleClass="textfield" stylesheets="@../CSS/AtualizarDados.css" />
+      <Button fx:id="bt1" layoutX="75.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" styleClass="bt" stylesheets="@../CSS/AtualizarDados.css" text="Editar Perfil" />
+      <Button fx:id="bt2" layoutX="516.0" layoutY="325.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="65.0" styleClass="bt" stylesheets="@../CSS/AtualizarDados.css" text="Salvar" />
+      <Button fx:id="bt3" layoutX="298.0" layoutY="325.0" mnemonicParsing="false" styleClass="bt" stylesheets="@../CSS/AtualizarDados.css" text="Cancelar" />
+      <Button fx:id="voltar" layoutX="68.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" styleClass="bt" stylesheets="@../CSS/AtualizarDados.css" text="Voltar" />
+   </children>
+</AnchorPane>
