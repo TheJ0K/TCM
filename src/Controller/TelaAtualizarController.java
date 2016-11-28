@@ -79,11 +79,17 @@ public class TelaAtualizarController implements Initializable {
 
     @FXML
     void salvar() {
-        Medias med = new Medias();
+        Historico med = new Historico();
         med.setRegistro1(Integer.valueOf(textf1.getText()));
         med.setRegistro2(Integer.valueOf(textf2.getText()));
-
+        
+        med.setData(datap1.getValue());
         med.consumo_de_agua();
+        med.getAgua();
+        
+        HistoricoDAO dao = new HistoricoDAO();
+        dao.InsereHistorico(med);
+        
         limpar();
     }
 
